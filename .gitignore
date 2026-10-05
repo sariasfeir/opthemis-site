@@ -1,0 +1,19 @@
+# Azure Functions / Python
+api/local.settings.json
+__pycache__/
+*.py[cod]
+.python_packages/
+.venv/
+venv/
+env/
+
+# Node (in case any future tooling is added)
+node_modules/
+dist/
+
+# OS
+.DS_Store
+
+# Editors
+.vscode/
+.idea/

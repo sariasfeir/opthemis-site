@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpThemis — Get Started</title>
+<meta name="description" content="OpThemis applies Pinch analysis and live plant data to find and prove industrial energy savings. Tell us about your site and we'll follow up.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --deep-forest:#1A3C34; --mid-green:#2D6A4F; --bright:#40916C; --light:#74C69D;
+    --pale-mint:#D8F3DC; --off-white:#FAFAF8; --ink:#0D1F1A; --ink-soft:#4a544d;
+    --rule:#e6e3db; --sans:"Hanken Grotesk",-apple-system,system-ui,sans-serif;
+    --mono:"JetBrains Mono",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--off-white);color:var(--ink);font-family:var(--sans);line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:720px;margin:0 auto;padding:0 24px}
+  nav{padding:28px 0}
+  .brand{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:20px;font-weight:600;letter-spacing:-0.01em}
+  .brand svg{width:26px;height:26px;color:var(--deep-forest)}
+  .brand em{font-style:italic;color:var(--mid-green);font-weight:500}
+  header.hero{padding:40px 0 16px}
+  .eyebrow{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.16em;color:var(--mid-green);font-weight:500}
+  h1{font-size:clamp(32px,5vw,48px);line-height:1.08;letter-spacing:-0.01em;margin:14px 0 0;font-weight:600}
+  h1 em{font-style:italic;color:var(--mid-green)}
+  .lead{margin:18px 0 0;font-size:18px;color:var(--ink-soft);max-width:54ch}
+  .points{display:grid;gap:14px;margin:32px 0 0;padding:0;list-style:none}
+  .points li{display:flex;gap:12px;align-items:flex-start;font-size:15px;color:var(--ink-soft)}
+  .points svg{flex:none;width:20px;height:20px;color:var(--mid-green);margin-top:2px}
+  form{margin-top:40px;padding:28px;background:#fff;border:1px solid var(--rule);border-radius:10px}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media (max-width:520px){.row{grid-template-columns:1fr}}
+  label{display:block;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-soft);margin:16px 0 6px}
+  label:first-child{margin-top:0}
+  input,select,textarea{width:100%;padding:11px 12px;border:1px solid var(--rule);border-radius:6px;font-family:var(--sans);font-size:15px;color:var(--ink);background:var(--off-white)}
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--light);outline-offset:0}
+  textarea{resize:vertical;min-height:70px}
+  .hp{position:absolute;left:-9999px;top:-9999px}
+  button{margin-top:22px;width:100%;padding:13px 18px;border:none;border-radius:6px;background:var(--deep-forest);color:#fff;font-family:var(--sans);font-size:15px;font-weight:600;cursor:pointer;transition:background 120ms ease}
+  button:hover{background:var(--mid-green)}
+  button:disabled{opacity:.6;cursor:default}
+  .msg{margin-top:14px;font-size:14px;display:none}
+  .msg.ok{color:var(--mid-green);display:block}
+  .msg.err{color:#b3261e;display:block}
+  footer{padding:40px 0 60px;font-family:var(--mono);font-size:11px;color:var(--ink-soft);letter-spacing:.04em}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="opthemis-mark" viewBox="0 0 375 375" preserveAspectRatio="xMidYMid meet">
+    <path fill="#2d6a4f" d="M 211.425781 142.910156 L 211.425781 198.574219 L 188.839844 210.675781 L 188.839844 188.085938 L 143.664062 210.675781 L 143.664062 188.085938 L 98.488281 210.675781 L 98.488281 271.984375 L 234.015625 271.984375 L 234.015625 142.910156 Z M 116.234375 231.648438 L 138.824219 231.648438 L 138.824219 247.785156 L 116.234375 247.785156 Z M 154.957031 231.648438 L 177.546875 231.648438 L 177.546875 247.785156 L 154.957031 247.785156 Z M 193.679688 231.648438 L 216.269531 231.648438 L 216.269531 247.785156 L 193.679688 247.785156 Z"/>
+    <path fill="#74c69d" d="M 99.90625 166.917969 L 100.019531 153.304688 C 115.007812 153.417969 129.039062 147.699219 139.640625 137.097656 C 161.222656 115.515625 161.222656 80.359375 139.640625 58.777344 C 118.058594 37.195312 82.902344 37.195312 61.320312 58.777344 C 48.429688 71.667969 42.824219 89.777344 45.914062 107.355469 L 57.046875 101.105469 L 56.515625 141.902344 L 21.511719 121.085938 L 33.484375 114.375 C 27.726562 91 34.511719 66.367188 51.710938 49.167969 C 78.59375 22.289062 122.367188 22.289062 149.25 49.167969 C 176.128906 76.050781 176.128906 119.824219 149.25 146.707031 C 136.054688 159.902344 118.589844 167.070312 99.90625 166.917969 Z"/>
+  </symbol>
+  <symbol id="ic-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M20 6L9 17l-5-5"/></symbol>
+</svg>
+
+<div class="wrap">
+  <nav><a class="brand" href="/"><svg><use href="#opthemis-mark"/></svg><span>O<em>p</em>Themis</span></a></nav>
+
+  <header class="hero">
+    <div class="eyebrow">Industrial energy &amp; decarbonization</div>
+    <h1>Find out what energy <em>optimization</em> is worth to your plant.</h1>
+    <p class="lead">OpThemis applies Pinch analysis and live process data to map where a site is losing energy and money — and sizes the fixes with a payback number attached, not just a sustainability slide.</p>
+    <ul class="points">
+      <li><svg><use href="#ic-check"/></svg>Built on established process-integration methodology (Pinch analysis), not a black box.</li>
+      <li><svg><use href="#ic-check"/></svg>Works from your actual site and equipment data, not generic benchmarks.</li>
+      <li><svg><use href="#ic-check"/></svg>Output is a ranked list of interventions with CO2 and cost impact, ready to action.</li>
+    </ul>
+  </header>
+
+  <form id="lead-form" novalidate>
+    <label for="name">Name</label>
+    <input id="name" name="name" type="text" autocomplete="name" placeholder="Jane Doe">
+
+    <div class="row">
+      <div>
+        <label for="email">Work email *</label>
+        <input id="email" name="email" type="email" required autocomplete="email" placeholder="jane@company.com">
+      </div>
+      <div>
+        <label for="company">Company</label>
+        <input id="company" name="company" type="text" autocomplete="organization" placeholder="Company name">
+      </div>
+    </div>
+
+    <label for="interest">I'd like to</label>
+    <select id="interest" name="interest">
+      <option value="More info">Receive more information</option>
+      <option value="Schedule a call">Schedule a call</option>
+    </select>
+
+    <label for="message">Anything you want us to know? (optional)</label>
+    <textarea id="message" name="message" placeholder="Site, industry, rough scale..."></textarea>
+
+    <!-- Honeypot: left blank by humans, filled in by most bots. Server rejects silently if set. -->
+    <input class="hp" type="text" name="website" id="website" tabindex="-1" autocomplete="off">
+
+    <button type="submit" id="submit-btn">Send</button>
+    <div class="msg" id="form-msg" role="status"></div>
+  </form>
+
+  <footer>OpThemis &middot; Lausanne, Switzerland &middot; <a href="mailto:saria.sfeir@opthemis.ch">saria.sfeir@opthemis.ch</a></footer>
+</div>
+
+<script>
+(function(){
+  var form = document.getElementById('lead-form');
+  var btn = document.getElementById('submit-btn');
+  var msg = document.getElementById('form-msg');
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    msg.className = 'msg';
+    msg.textContent = '';
+
+    var email = document.getElementById('email').value.trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      msg.className = 'msg err';
+      msg.textContent = 'Please enter a valid email address.';
+      return;
+    }
+
+    var payload = {
+      name: document.getElementById('name').value.trim(),
+      email: email,
+      company: document.getElementById('company').value.trim(),
+      interest: document.getElementById('interest').value,
+      message: document.getElementById('message').value.trim(),
+      website: document.getElementById('website').value // honeypot
+    };
+
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+
+    fetch('/api/lead_capture', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(payload)
+    }).then(function(res){
+      if (!res.ok) throw new Error('bad status');
+      return res.json();
+    }).then(function(){
+      msg.className = 'msg ok';
+      msg.textContent = "Thanks — we'll be in touch shortly.";
+      form.reset();
+      btn.textContent = 'Send';
+      btn.disabled = false;
+    }).catch(function(){
+      msg.className = 'msg err';
+      msg.textContent = "Something went wrong. Please email saria.sfeir@opthemis.ch directly.";
+      btn.textContent = 'Send';
+      btn.disabled = false;
+    });
+  });
+})();
+</script>
+</body>
+</html>
